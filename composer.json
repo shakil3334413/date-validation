@@ -3,6 +3,18 @@
     "description": "Timezone-aware relative calendar date validation rules for Laravel.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "laravel",
+        "validation",
+        "date",
+        "relative-date",
+        "carbon"
+    ],
+    "homepage": "https://github.com/shakil3334413/date-validation",
+    "support": {
+        "issues": "https://github.com/shakil3334413/date-validation/issues",
+        "source": "https://github.com/shakil3334413/date-validation"
+    },
     "require": {
         "php": "^8.2",
         "illuminate/contracts": "^12.0 || ^13.0",

@@ -4,11 +4,23 @@ Reusable Laravel rules with inclusive calendar-day boundaries, application timez
 
 Requires PHP 8.2+ and Laravel 12 or 13 (Laravel 13 requires PHP 8.3+).
 
-## Install locally
+## Installation
+
+Install the package in any Laravel application with Composer:
+
+~~~bash
+composer require shakil3334413/date-validation
+~~~
+
+Laravel discovers the service provider automatically. If discovery is disabled, register Shakil\DateValidation\DateValidationServiceProvider in the application's providers.
+
+This package is distributed through Packagist from the public GitHub repository. Stable releases use semantic version tags such as v1.0.0.
+
+## Local Development Install
 
 This repository is a Composer package. No Laravel application, Nginx virtual host, npm build, or compiled assets are needed here.
 
-Add this repository to the consuming Laravel application's composer.json:
+For local testing before a release, add this repository to the consuming Laravel application's composer.json:
 
 ~~~json
 {
@@ -18,7 +30,7 @@ Add this repository to the consuming Laravel application's composer.json:
             "url": "/var/www/html/date-validation",
             "options": {
                 "symlink": true,
-                "versions": {"shakil3334413/date-validation": "dev-staging"}
+                "versions": {"shakil3334413/date-validation": "dev-production"}
             }
         }
     ]
@@ -28,12 +40,8 @@ Add this repository to the consuming Laravel application's composer.json:
 Run in that application:
 
 ~~~bash
-composer require shakil3334413/date-validation:dev-staging
+composer require shakil3334413/date-validation:dev-production
 ~~~
-
-Laravel discovers the service provider automatically. If discovery is disabled, register Shakil\DateValidation\DateValidationServiceProvider in the application's providers.
-
-This package has not been published to Packagist. After pushing a branch/tag, consumers can alternatively configure this Git repository as a Composer VCS repository. Stable releases should use semantic version tags such as v1.0.0.
 
 ## Usage
 
@@ -155,7 +163,7 @@ Package directory: /var/www/html/date-validation inside Nginx-WSL.
 - production: promote reviewed, tested commits here and tag stable releases.
 - master: original branch, preserved.
 
-The initial implementation is in the staging working tree. Production starts at the original repository commit until review and promotion. Branches are local until pushed.
+The production branch contains the public package code. Tag stable releases from production.
 
 ~~~bash
 cd /var/www/html/date-validation
